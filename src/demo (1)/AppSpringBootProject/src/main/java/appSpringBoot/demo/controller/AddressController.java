@@ -15,6 +15,6 @@ public class AddressController {
     @GetMapping("/adresses")
     public String showAddresses(Model model) {
         model.addAttribute("allAddresses", addressRepository.findAll());
-        return "addresses";
+        return "adresses";
     }
 }
