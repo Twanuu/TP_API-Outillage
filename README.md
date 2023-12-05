@@ -19,6 +19,6 @@ Provides fast application restarts, LiveReload, and configurations for enhanced 
 # Thymeleaf TEMPLATE ENGINES
 A modern server-side Java template engine for both web and standalone environments. Allows HTML to be correctly displayed in browsers and as static prototypes.
 
-#Etape 17
+# Etape 17
 On remarque l'apparition d'une table ADDRESS contenant nos arguments.
 Il y a égamlement une HIBERNATE_SEQUENCE
