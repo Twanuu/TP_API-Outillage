@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Meteo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous">
+    <meta http-equiv="Content-Type" content="text/html ; charset=UTF-8"/>
+</head>
+<body>
+<header th:insert="fragments/navbar.html :: body"></header>
+<h1>Meteo Page</h1>
+
+<p>Address: <span th:text="${address}"></span></p>
+
+<!-- Vérifiez si les coordonnées sont disponibles avant de les afficher -->
+<div th:if="${coordinates != null}">
+    <p>Latitude: <span th:text="${coordinates.latitude}"></span></p>
+    <p>Longitude: <span th:text="${coordinates.longitude}"></span></p>
+
+    <div th:if="${forecast != null}">
+        <p>Update: <span th:text="'Date : ' +  ${forecast.update}"></span></p>
+        <p>Update: <span th:text="'Ville : ' +  ${forecast.city.name}"></span></p>
+        <p>Update: <span th:text="'Température min : ' +  ${forecast.forecast.tmin}"></span></p>
+        <p>Update: <span th:text="'Température max : ' +  ${forecast.forecast.tmax}"></span></p>
+        <p>Update: <span th:text="'Code weather : ' +  ${forecast.forecast.weather}"></span></p>
+    </div>
+    <div th:unless="${forecast != null}">
+        <p>Weather forecast not available.</p>
+    </div>
+</div>
+<div th:unless="${coordinates != null}">
+    <p>Coordinates not available.</p>
+</div>
+</body>
+</html>
