@@ -54,8 +54,8 @@ link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.c
 1. Oui, une clé API est nécessaire pour appeler MeteoConcept.
 2. L'URL à appeler est "https://api.meteo-concept.com/api".
 3. Il faut utiliser la méthode HTTP GET pour effectuer la demande.
-4. Les paramètres peuvent être passés dans l'URL en utilisant la syntaxe habituelle des paramètres de requête. Pour les coordonnées GPS, utilisez le paramètre "latlng", et pour le code INSEE de la commune, utilisez le paramètre "insee".  
+4. Les paramètres peuvent être passés dans l'URL en utilisant la syntaxe habituelle des paramètres de requête. Pour les coordonnées GPS, il faut utiliser le paramètre "latlng", et pour le code INSEE de la commune, le paramètre "insee".  
 5. Pour afficher la température du lieu visé par les coordonnées GPS :  
-L'information de température peut être extraite de l'objet forecast dans la réponse. Par exemple, si forecast est une instance de MeteoDailyForecast, vous pouvez accéder à la température via forecast.getTmin() et forecast.getTmax().
+L'information de température peut être extraite de l'objet forecast dans la réponse. Par exemple, si forecast est une instance de MeteoDailyForecast, on peut accéder à la température via forecast.getTmin() et forecast.getTmax().
 6. Pour afficher la prévision de météo du lieu visé par les coordonnées GPS :  
-Les détails de la prévision météorologique se trouvent également dans l'objet forecast dans la réponse. Vous pouvez accéder aux différentes informations telles que le vent, la pluie, la neige, etc., en fonction de la structure de la classe MeteoDailyForecast. Par exemple, pour la pluie, vous pouvez utiliser forecast.getRr10().
+Les détails de la prévision météorologique se trouvent également dans l'objet forecast dans la réponse. On peut accéder aux différentes informations telles que le vent, la pluie, la neige, etc., en fonction de la structure de la classe MeteoDailyForecast.
